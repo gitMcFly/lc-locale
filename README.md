@@ -7,6 +7,8 @@ Not a complete enumeration by any means, but your favorite country & language is
 ## Usage
 
 ```swift
+import lc_locale
+
 let toronto = Locale.canada(language: .english)
 let quebec = Locale.canada(language: .french)
 
