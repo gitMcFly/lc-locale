@@ -1,7 +1,7 @@
 //  Locale+Extensions.swift
 //  6/22/20
 
-import Foundation
+@_exported import struct Foundation.Locale
 
 public extension Locale {
     enum Language: String, CaseIterable {
