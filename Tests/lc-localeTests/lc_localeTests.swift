@@ -2,15 +2,6 @@ import XCTest
 @testable import lc_locale
 
 final class lc_localeTests: XCTestCase {
-    static var allTests = [
-        ("testLanguage", testLanguage),
-        ("testAllHaveUniqueCountryCode", testAllHaveUniqueCountryCode),
-        
-    ]
-    
-}
-
-extension lc_localeTests {
     func testLanguage() {
         let toronto = Locale.canada(language: .english)
         let quebec = Locale.canada(language: .french)
