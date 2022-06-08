@@ -4,10 +4,6 @@
 @_exported import struct Foundation.Locale
 
 public extension Locale {
-    @available(macOS, deprecated, obsoleted: 13, renamed: "LCLanguage")
-    @available(*, deprecated, renamed: "LCLanguage")
-    typealias Language = LCLanguage
-    
     enum LCLanguage: String, CaseIterable {
         case chinese = "zh"
         case danish = "da"
@@ -92,5 +88,17 @@ public extension Locale {
         guard let languageCode = self.languageCode else { return nil }
         return LCLanguage.allCases.first { $0.rawValue == languageCode }
     }
+    
+}
+
+// MARK: - Deprecations
+
+extension Locale {
+    @available(macOS, deprecated, obsoleted: 13, renamed: "LCLanguage")
+    @available(iOS, deprecated, obsoleted: 16, renamed: "LCLanguage")
+    @available(tvOS, deprecated, obsoleted: 16, renamed: "LCLanguage")
+    @available(watchOS, deprecated, obsoleted: 9, renamed: "LCLanguage")
+    @available(*, deprecated, renamed: "LCLanguage")
+    public typealias Language = LCLanguage
     
 }
